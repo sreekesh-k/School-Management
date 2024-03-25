@@ -1,5 +1,5 @@
-@extends('layout')
-@section('title', 'Login')
+@extends('studentlayout')
+@section('title', 'StudentLogin')
 @section('content')
     <div class="container">
         <div class='mt-5'>
@@ -17,10 +17,10 @@
                 <div class="alert alert-success">{{ session('Success') }}</div>
             @endif
         </div>
-        <form action="{{ route('studentlogin.post') }}" method="POST" class="ms-auto me-auto" style="width:500px">
+        <form action="{{ route('students.post') }}" method="POST" class="ms-auto me-auto" style="width:500px">
             @csrf
             <div class="mb-3">
-                <label class="form-label">name</label>
+                <label class="form-label">Name</label>
                 <input type="email" class="form-control" name="email">
             </div>
             <div class="mb-3">

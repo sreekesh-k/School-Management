@@ -9,6 +9,7 @@ Route::get('/', [AuthManager::class, 'login'])->name('login');
 Route::post('/', [AuthManager::class, 'loginPost'])->name('login.post');
 
 Route::get('/Students', [AuthManager::class, 'studentLogin'])->name('students');
+Route::post('/Students', [AuthManager::class, 'studentLoginpost'])->name('students.post');
 
 Route::get('/register', [AuthManager::class, 'register'])->name('register');
 Route::post('/register', [AuthManager::class, 'registerPost'])->name('register.post');

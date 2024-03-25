@@ -65,4 +65,8 @@ class AuthManager extends Controller
     {
         return view('studentLogin');
     }
+    function studentLoginpost()
+    {
+        return view('studentLogin');
+    }
 }
