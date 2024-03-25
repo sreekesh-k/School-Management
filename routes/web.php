@@ -12,6 +12,7 @@ Route::get('/Students', [AuthManager::class, 'studentLogin'])->name('students');
 Route::post('/Students', [AuthManager::class, 'studentLoginpost'])->name('students.post');
 
 Route::get('/marks', [AuthManager::class, 'marks'])->name('marks');
+Route::get('/studentlogout', [AuthManager::class, 'studentlogout'])->name('studentlogout');
 
 Route::get('/register', [AuthManager::class, 'register'])->name('register');
 Route::post('/register', [AuthManager::class, 'registerPost'])->name('register.post');

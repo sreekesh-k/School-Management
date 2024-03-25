@@ -78,7 +78,6 @@ class AuthManager extends Controller
         if ($student) {
             if ($student->password === $password) {
                 Session::put('name', $name);
-                // Session::forget('name');
                 return redirect()->intended(route('marks'));
             } else {
                 return redirect()->intended(route('students'))->with("Error", "Wrong Password");
@@ -87,7 +86,18 @@ class AuthManager extends Controller
             return redirect()->intended(route('students'))->with("Error", "Invalid Credentials");
         }
     }
-    function marks(){
-        return view('marks');
+    function marks()
+    {
+        if (session()->has('name')) {
+            $name = session('name');
+            return view('marks', ['name' => $name]);
+        } else {
+            return redirect()->route('students')->with('Error', 'Please log in to view your marks.');
+        }
+    }
+    function studentlogout()
+    {
+        Session::forget('name');
+        return redirect()->intended(route('students'));
     }
 }
