@@ -60,19 +60,19 @@ $count = 0;
                 </tr>
             </thead>
             <tbody>
-                @foreach ($items as $item)
+                @foreach ($students as $student)
                     <tr>
                         <th scope="row">{{ ++$count }}</th>
-                        <td> {{ $item->id }}</td>
-                        <td> {{ $item->name }}</td>
-                        <td> {{ $item->OR }}</td>
-                        <td> {{ $item->Java }}</td>
-                        <td> {{ $item->ASE }}</td>
-                        <td> {{ $item->DAA }}</td>
-                        <td> {{ $item->AI }}</td>
-                        <td>{{ $item->totalMarks }}</td>
-                        <td> <a href="{{ route('updating', ['item' => $item]) }}">Edit</a></td>
-                        <td><a href="{{ route('deleting', ['item' => $item]) }}">Delete</a></td>
+                        <td> {{ $student->id }}</td>
+                        <td> {{ $student->name }}</td>
+                        <td> {{ $student->OR }}</td>
+                        <td> {{ $student->Java }}</td>
+                        <td> {{ $student->ASE }}</td>
+                        <td> {{ $student->DAA }}</td>
+                        <td> {{ $student->AI }}</td>
+                        <td>{{ $student->totalMarks }}</td>
+                        <td> <a href="{{ route('updating', ['student' => $student]) }}">Edit</a></td>
+                        <td><a href="{{ route('deleting', ['student' => $student]) }}">Delete</a></td>
                     </tr>
                 @endforeach
             </tbody>

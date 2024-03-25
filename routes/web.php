@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\AuthManager;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ItemController;
+use App\Http\Controllers\studentController;
 
 
 Route::get('/', [AuthManager::class, 'login'])->name('login');
@@ -12,9 +12,9 @@ Route::get('/register', [AuthManager::class, 'register'])->name('register');
 Route::post('/register', [AuthManager::class, 'registerPost'])->name('register.post');
 Route::get('/logout', [AuthManager::class, 'logout'])->name('logout');
 
-Route::get('/welcome', [ItemController::class, 'read'])->name('reading');
-Route::get('/create', [ItemController::class, 'create'])->name('creating');
-Route::post("/create", [ItemController::class, 'createConfirm'])->name('create.confirm');
-Route::get('/update{item}', [ItemController::class, 'update'])->name('updating');
-Route::post("/update{item}", [ItemController::class, 'updateConfirm'])->name('update.confirm');
-Route::get("/{item}", [ItemController::class, 'delete'])->name('deleting');
+Route::get('/welcome', [studentController::class, 'read'])->name('reading');
+Route::get('/create', [studentController::class, 'create'])->name('creating');
+Route::post("/create", [studentController::class, 'createConfirm'])->name('create.confirm');
+Route::get('/update{student}', [studentController::class, 'update'])->name('updating');
+Route::post("/update{student}", [studentController::class, 'updateConfirm'])->name('update.confirm');
+Route::get("/{student}", [studentController::class, 'delete'])->name('deleting');

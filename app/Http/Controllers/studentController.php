@@ -2,17 +2,15 @@
 
 namespace App\Http\Controllers;
 
-
-use App\Models\item;
+use App\Models\student;
 use Illuminate\Http\Request;
 
-class ItemController extends Controller
+class studentController extends Controller
 {
-    //
     public function read()
     {
-        $items = item::all();
-        return view('index', ['items' => $items]);
+        $students = student::all();
+        return view('index', ['students' => $students]);
     }
     public function create()
     {
@@ -33,14 +31,14 @@ class ItemController extends Controller
         $data['uid'] = $uid;
         $data['totalMarks'] = $totalMarks;
         $data['password'] = $request->name . "123";
-        $newitem = item::create($data);
+        $newstudent = student::create($data);
         return redirect(route('reading'))->with('success', 'student added SuccessFully');
     }
-    public function update(item $item)
+    public function update(student $student)
     {
-        return view('update', ['item' => $item]);
+        return view('update', ['student' => $student]);
     }
-    public function updateConfirm(Request $request, item $item)
+    public function updateConfirm(Request $request, student $student)
     {
         $data = $request->validate([
             'name' => 'required',
@@ -54,12 +52,12 @@ class ItemController extends Controller
         $uid = auth()->user()->id;
         $data['uid'] = $uid;
         $data['totalMarks'] = $totalMarks;
-        $item->update($data);
+        $student->update($data);
         return redirect(route('reading'))->with('success', 'details Updated SuccessFully');
     }
-    public function delete(item $item)
+    public function delete(student $student)
     {
-        $item->delete();
+        $student->delete();
         return redirect(route('reading'))->with('success', 'student removed SuccessFully');
     }
 }

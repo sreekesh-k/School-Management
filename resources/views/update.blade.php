@@ -25,32 +25,32 @@
             </ul>
         @endif
         <div class="container">
-            <form class="ms-auto me-auto" style="width:400px;" action="{{ route('update.confirm', ['item' => $item]) }}"
+            <form class="ms-auto me-auto" style="width:400px;" action="{{ route('update.confirm', ['student' => $student]) }}"
                 method="POST">
                 @csrf
                 <div class="mb-3">
                     <label class="form-label">Student Name</label>
-                    <input type="text" class="form-control" name="name" value="{{ $item->name }}" placeholder="Max: 100">
+                    <input type="text" class="form-control" name="name" value="{{ $student->name }}" placeholder="Max: 100">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">OR</label>
-                    <input type="number" class="form-control" name ="OR" value="{{ $item->OR }}" placeholder="Max: 100">
+                    <input type="number" class="form-control" name ="OR" value="{{ $student->OR }}" placeholder="Max: 100">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">JAVA</label>
-                    <input type="number" class="form-control" name ="Java" value="{{ $item->Java }}" placeholder="Max: 100">
+                    <input type="number" class="form-control" name ="Java" value="{{ $student->Java }}" placeholder="Max: 100">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">ASE</label>
-                    <input type="number" class="form-control" name ="ASE" value="{{ $item->ASE }}" placeholder="Max: 100">
+                    <input type="number" class="form-control" name ="ASE" value="{{ $student->ASE }}" placeholder="Max: 100">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">DAA</label>
-                    <input type="number" class="form-control" name ="DAA" value="{{ $item->DAA }}" placeholder="Max: 100">
+                    <input type="number" class="form-control" name ="DAA" value="{{ $student->DAA }}" placeholder="Max: 100">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">AI</label>
-                    <input type="number" class="form-control" name ="AI" value="{{ $item->AI }}" placeholder="Max: 100">
+                    <input type="number" class="form-control" name ="AI" value="{{ $student->AI }}" placeholder="Max: 100">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
