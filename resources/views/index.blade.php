@@ -49,7 +49,7 @@ $count = 0;
                     <th scope="col">SI</th>
                     <th scope="col">ID</th>
                     <th scope="col">StudentName</th>
-                    <th scope="col">Marks</th>
+                    <th scope="col">TotalMarks</th>
                     <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
                 </tr>
@@ -60,7 +60,7 @@ $count = 0;
                         <th scope="row">{{ ++$count }}</th>
                         <td> {{ $item->id }}</td>
                         <td> {{ $item->name }}</td>
-                        <td>{{ $item->description }}</td>
+                        <td>{{ $item->totalMarks }}</td>
                         <td> <a href="{{ route('updating', ['item' => $item]) }}">Edit</a></td>
                         <td><a href="{{ route('deleting', ['item' => $item]) }}">Delete</a></td>
                     </tr>

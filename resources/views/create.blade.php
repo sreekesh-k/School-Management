@@ -32,8 +32,24 @@
                 <input type="text" class="form-control" name="name">
             </div>
             <div class="mb-3">
-                <label class="form-label">Marks</label>
-                <input type="text" class="form-control" name ="description" placeholder="out of 100">
+                <label class="form-label">OR</label>
+                <input type="number" class="form-control" name ="OR">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">JAVA</label>
+                <input type="number" class="form-control" name ="Java">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">ASE</label>
+                <input type="number" class="form-control" name ="ASE">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">DAA</label>
+                <input type="number" class="form-control" name ="DAA">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">AI</label>
+                <input type="number" class="form-control" name ="AI">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

@@ -22,10 +22,17 @@ class ItemController extends Controller
     {
         $data = $request->validate([
             'name' => 'required',
-            'description' => 'required',
+            'OR' => 'required',
+            'Java' => 'required',
+            'ASE' => 'required',
+            'DAA' => 'required',
+            'AI' => 'required',
         ]);
+        $totalMarks = $request->OR + $request->Java + $request->ASE +  $request->DAA + $request->AI;
         $uid = auth()->user()->id;
         $data['uid'] = $uid;
+        $data['totalMarks'] = $totalMarks;
+        $data['password'] = $request->name . "123";
         $newitem = item::create($data);
         return redirect(route('reading'))->with('success', 'student added SuccessFully');
     }
@@ -37,8 +44,16 @@ class ItemController extends Controller
     {
         $data = $request->validate([
             'name' => 'required',
-            'description' => 'required'
+            'OR' => 'required',
+            'Java' => 'required',
+            'ASE' => 'required',
+            'DAA' => 'required',
+            'AI' => 'required',
         ]);
+        $totalMarks = $request->OR + $request->Java + $request->ASE +  $request->DAA + $request->AI;
+        $uid = auth()->user()->id;
+        $data['uid'] = $uid;
+        $data['totalMarks'] = $totalMarks;
         $item->update($data);
         return redirect(route('reading'))->with('success', 'details Updated SuccessFully');
     }

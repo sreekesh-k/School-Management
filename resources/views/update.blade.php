@@ -33,9 +33,24 @@
                     <input type="text" class="form-control" name="name" value="{{ $item->name }}">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Marks</label>
-                    <input type="text" class="form-control" name ="description" value="{{ $item->description }}"
-                        placeholder="out of 100">
+                    <label class="form-label">OR</label>
+                    <input type="number" class="form-control" name ="OR" value="{{ $item->OR }}">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">JAVA</label>
+                    <input type="number" class="form-control" name ="Java" value="{{ $item->Java }}">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">ASE</label>
+                    <input type="number" class="form-control" name ="ASE" value="{{ $item->ASE }}">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">DAA</label>
+                    <input type="number" class="form-control" name ="DAA" value="{{ $item->DAA }}">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">AI</label>
+                    <input type="number" class="form-control" name ="AI" value="{{ $item->AI }}">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
