@@ -90,7 +90,12 @@ class AuthManager extends Controller
     {
         if (session()->has('name')) {
             $name = session('name');
-            return view('marks', ['name' => $name]);
+            $student = Student::where('name', $name)->first();
+            if ($student) {
+                return view('marks', ['name' => $name, 'student' => $student]);
+            } else {
+                return redirect()->route('students')->with('Error', 'Student details not found.');
+            }
         } else {
             return redirect()->route('students')->with('Error', 'Please log in to view your marks.');
         }

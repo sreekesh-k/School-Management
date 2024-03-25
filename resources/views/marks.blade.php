@@ -23,11 +23,38 @@
                     </li>
                 </ul>
                 <span clas="navbar-text">
-
                 </span>
             </div>
         </div>
     </nav>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">StudentName</th>
+                    <th scope="col">OR</th>
+                    <th scope="col">Java</th>
+                    <th scope="col">ASE</th>
+                    <th scope="col">DAA</th>
+                    <th scope="col">AI</th>
+                    <th scope="col">TotalMarks<br>(out of 500)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> {{ $student->id }}</td>
+                    <td> {{ $student->name }}</td>
+                    <td> {{ $student->OR }}</td>
+                    <td> {{ $student->Java }}</td>
+                    <td> {{ $student->ASE }}</td>
+                    <td> {{ $student->DAA }}</td>
+                    <td> {{ $student->AI }}</td>
+                    <td>{{ $student->totalMarks }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
