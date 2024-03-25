@@ -13,7 +13,7 @@
 
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">Update Items</span>
+            <span class="navbar-brand mb-0 h1">Update details</span>
         </div>
     </nav>
     <div>
@@ -29,14 +29,13 @@
                 method="POST">
                 @csrf
                 <div class="mb-3">
-                    <label class="form-label">Item Name</label>
-                    <input type="text" class="form-control" name="name" placeholder="Apple"
-                        value="{{ $item->name }}">
+                    <label class="form-label">Student Name</label>
+                    <input type="text" class="form-control" name="name" value="{{ $item->name }}">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Description</label>
-                    <input type="text" class="form-control" name ="description" placeholder="Green Apple"
-                        value="{{ $item->description }}">
+                    <label class="form-label">Marks</label>
+                    <input type="text" class="form-control" name ="description" value="{{ $item->description }}"
+                        placeholder="out of 100">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

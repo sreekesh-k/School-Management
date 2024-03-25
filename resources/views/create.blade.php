@@ -12,7 +12,7 @@
 
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">Create Items</span>
+            <span class="navbar-brand mb-0 h1">Add Student</span>
         </div>
     </nav>
     <div>
@@ -28,12 +28,12 @@
         <form class="ms-auto me-auto" style="width:400px;" action="{{ route('create.confirm') }}" method="POST">
             @csrf
             <div class="mb-3">
-                <label class="form-label">Item Name</label>
-                <input type="text" class="form-control" name="name" placeholder="Apple">
+                <label class="form-label">Student Name</label>
+                <input type="text" class="form-control" name="name">
             </div>
             <div class="mb-3">
-                <label class="form-label">Description</label>
-                <input type="text" class="form-control" name ="description" placeholder="Green Apple">
+                <label class="form-label">Marks</label>
+                <input type="text" class="form-control" name ="description" placeholder="out of 100">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

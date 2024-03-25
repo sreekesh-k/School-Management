@@ -11,8 +11,7 @@ class ItemController extends Controller
     //
     public function read()
     {
-        $uid = auth()->user()->id;
-        $items = Item::where('uid', $uid)->get();
+        $items = item::all();
         return view('index', ['items' => $items]);
     }
     public function create()
@@ -28,7 +27,7 @@ class ItemController extends Controller
         $uid = auth()->user()->id;
         $data['uid'] = $uid;
         $newitem = item::create($data);
-        return redirect(route('reading'))->with('success', 'Item Created SuccessFully');
+        return redirect(route('reading'))->with('success', 'student added SuccessFully');
     }
     public function update(item $item)
     {
@@ -41,11 +40,11 @@ class ItemController extends Controller
             'description' => 'required'
         ]);
         $item->update($data);
-        return redirect(route('reading'))->with('success', 'Item Updated SuccessFully');
+        return redirect(route('reading'))->with('success', 'details Updated SuccessFully');
     }
     public function delete(item $item)
     {
         $item->delete();
-        return redirect(route('reading'))->with('success', 'Item Deleted SuccessFully');
+        return redirect(route('reading'))->with('success', 'student removed SuccessFully');
     }
 }
