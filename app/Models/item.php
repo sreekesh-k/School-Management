@@ -10,7 +10,13 @@ class item extends Model
     use HasFactory;
     protected $fillable = [
         'name',
-        'description',
-        'uid'
+        'password',
+        'uid',
+        'totalMarks',
+        'OR',
+        'Java',
+        'ASE',
+        'DAA',
+        'AI'
     ];
 }
