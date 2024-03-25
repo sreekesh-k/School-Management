@@ -30,27 +30,27 @@
                 @csrf
                 <div class="mb-3">
                     <label class="form-label">Student Name</label>
-                    <input type="text" class="form-control" name="name" value="{{ $item->name }}">
+                    <input type="text" class="form-control" name="name" value="{{ $item->name }}" placeholder="Max: 100">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">OR</label>
-                    <input type="number" class="form-control" name ="OR" value="{{ $item->OR }}">
+                    <input type="number" class="form-control" name ="OR" value="{{ $item->OR }}" placeholder="Max: 100">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">JAVA</label>
-                    <input type="number" class="form-control" name ="Java" value="{{ $item->Java }}">
+                    <input type="number" class="form-control" name ="Java" value="{{ $item->Java }}" placeholder="Max: 100">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">ASE</label>
-                    <input type="number" class="form-control" name ="ASE" value="{{ $item->ASE }}">
+                    <input type="number" class="form-control" name ="ASE" value="{{ $item->ASE }}" placeholder="Max: 100">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">DAA</label>
-                    <input type="number" class="form-control" name ="DAA" value="{{ $item->DAA }}">
+                    <input type="number" class="form-control" name ="DAA" value="{{ $item->DAA }}" placeholder="Max: 100">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">AI</label>
-                    <input type="number" class="form-control" name ="AI" value="{{ $item->AI }}">
+                    <input type="number" class="form-control" name ="AI" value="{{ $item->AI }}" placeholder="Max: 100">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

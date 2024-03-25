@@ -33,23 +33,23 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">OR</label>
-                <input type="number" class="form-control" name ="OR">
+                <input type="number" class="form-control" name ="OR" placeholder="Max: 100">
             </div>
             <div class="mb-3">
                 <label class="form-label">JAVA</label>
-                <input type="number" class="form-control" name ="Java">
+                <input type="number" class="form-control" name ="Java" placeholder="Max: 100">
             </div>
             <div class="mb-3">
                 <label class="form-label">ASE</label>
-                <input type="number" class="form-control" name ="ASE">
+                <input type="number" class="form-control" name ="ASE" placeholder="Max: 100">
             </div>
             <div class="mb-3">
                 <label class="form-label">DAA</label>
-                <input type="number" class="form-control" name ="DAA">
+                <input type="number" class="form-control" name ="DAA" placeholder="Max: 100">
             </div>
             <div class="mb-3">
                 <label class="form-label">AI</label>
-                <input type="number" class="form-control" name ="AI">
+                <input type="number" class="form-control" name ="AI" placeholder="Max: 100">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

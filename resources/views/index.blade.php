@@ -49,7 +49,12 @@ $count = 0;
                     <th scope="col">SI</th>
                     <th scope="col">ID</th>
                     <th scope="col">StudentName</th>
-                    <th scope="col">TotalMarks</th>
+                    <th scope="col">OR</th>
+                    <th scope="col">Java</th>
+                    <th scope="col">ASE</th>
+                    <th scope="col">DAA</th>
+                    <th scope="col">AI</th>
+                    <th scope="col">TotalMarks<br>(out of 500)</th>
                     <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
                 </tr>
@@ -60,6 +65,11 @@ $count = 0;
                         <th scope="row">{{ ++$count }}</th>
                         <td> {{ $item->id }}</td>
                         <td> {{ $item->name }}</td>
+                        <td> {{ $item->OR }}</td>
+                        <td> {{ $item->Java }}</td>
+                        <td> {{ $item->ASE }}</td>
+                        <td> {{ $item->DAA }}</td>
+                        <td> {{ $item->AI }}</td>
                         <td>{{ $item->totalMarks }}</td>
                         <td> <a href="{{ route('updating', ['item' => $item]) }}">Edit</a></td>
                         <td><a href="{{ route('deleting', ['item' => $item]) }}">Delete</a></td>
