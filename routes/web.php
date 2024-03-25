@@ -8,6 +8,8 @@ use App\Http\Controllers\studentController;
 Route::get('/', [AuthManager::class, 'login'])->name('login');
 Route::post('/', [AuthManager::class, 'loginPost'])->name('login.post');
 
+Route::get('/Students', [AuthManager::class, 'studentLogin'])->name('students');
+
 Route::get('/register', [AuthManager::class, 'register'])->name('register');
 Route::post('/register', [AuthManager::class, 'registerPost'])->name('register.post');
 Route::get('/logout', [AuthManager::class, 'logout'])->name('logout');
@@ -18,3 +20,4 @@ Route::post("/create", [studentController::class, 'createConfirm'])->name('creat
 Route::get('/update{student}', [studentController::class, 'update'])->name('updating');
 Route::post("/update{student}", [studentController::class, 'updateConfirm'])->name('update.confirm');
 Route::get("/{student}", [studentController::class, 'delete'])->name('deleting');
+

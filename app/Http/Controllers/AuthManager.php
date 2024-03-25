@@ -61,4 +61,8 @@ class AuthManager extends Controller
         Auth::logout();
         return redirect()->intended(route('login'));
     }
+    function studentLogin()
+    {
+        return view('studentLogin');
+    }
 }
